@@ -1,25 +1,21 @@
 import React, { Component } from "react";
-import { View, StyleSheet, Text, StatusBar, Button, Image } from "react-native";
-import { createStackNavigator } from 'react-navigation-stack';
+import { View, StyleSheet, Text, Button, Image } from "react-native";
+import SignUp from "../Screens/SignUp";
 
 class Home extends Component {
     render() {
         return ( 
         <View style = { styles.container } > 
-        <StatusBar barStyle="light-content"/>
+        
         
             <View style = { styles.logoContainer } >
                 <Image style = { styles.logo }
                     source = {require("../../assets/icon.png") } >
                 </Image>
-
-                <Text styles={styles.header}>UnpaKd</Text>
-                
                 <View style={styles.infoContainer}>
             <Text style={styles.title}>Plasticfree food shopping for a better world!</Text>
-          
                 <Button style= {styles.button}
-                title='Sign in as a store'
+                title='Sign UP as a store'
                  onPress={()=> this.props.navigation.navigate('SignUp')} /> 
            
             </View>
@@ -33,11 +29,15 @@ class Home extends Component {
 
 
 
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: 'black',
-        flexDirection: 'column'
+        flexDirection: 'column',
+        width: "100%",
+        height: "100%",
+        padding: 50,
     },
    
     logo: {
@@ -46,10 +46,7 @@ const styles = StyleSheet.create({
         marginTop: 10,
         position: 'absolute'
     },
-    header:{
-        color: 'black',
-        fontSize: 60,
-    },
+    
     title: {
         color: 'white',
         fontSize: 18,
@@ -63,7 +60,7 @@ const styles = StyleSheet.create({
         bottom: 0, 
         height: 50,
         padding: 20,
-        backgroundColor: 'white'
+        
     },
     button: { 
       color: 'red'
