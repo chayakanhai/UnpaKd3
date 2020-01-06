@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { View, StyleSheet, Text, StatusBar, Button, Image } from "react-native";
+import { createStackNavigator } from 'react-navigation-stack';
 
 class Home extends Component {
     render() {
@@ -9,7 +10,7 @@ class Home extends Component {
         
             <View style = { styles.logoContainer } >
                 <Image style = { styles.logo }
-                    source = { '../../assets/icon.png' } >
+                    source = {require("../../assets/icon.png") } >
                 </Image>
 
                 <Text styles={styles.header}>UnpaKd</Text>
@@ -17,7 +18,9 @@ class Home extends Component {
                 <View style={styles.infoContainer}>
             <Text style={styles.title}>Plasticfree food shopping for a better world!</Text>
           
-                <Button style= {styles.button} onPress={()=> this.props.navigation.navigate('signup')} title='Sign in as a store'></Button> 
+                <Button style= {styles.button}
+                title='Sign in as a store'
+                 onPress={()=> this.props.navigation.navigate('SignUp')} /> 
            
             </View>
             </View > 
@@ -33,13 +36,14 @@ class Home extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'green',
+        backgroundColor: 'black',
         flexDirection: 'column'
     },
    
     logo: {
-        width: '50%',
-        height: 56,
+        width: '100%',
+        height: 300,
+        marginTop: 10,
         position: 'absolute'
     },
     header:{
@@ -59,7 +63,7 @@ const styles = StyleSheet.create({
         bottom: 0, 
         height: 50,
         padding: 20,
-        backgroundColor: 'green'
+        backgroundColor: 'white'
     },
     button: { 
       color: 'red'

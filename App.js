@@ -19,21 +19,31 @@ const HomeStack = createStackNavigator({
         //Defination of Navigaton from home screen
         Home: { screen: Home },
         StoreSignUp: { screen: SignUp },
+        ShoppingList: { screen: ShoppingList}
     },
 
 );
 const SignUpStack = createStackNavigator({
 
         StoreSignUp: { screen: SignUp },
+        ShoppingList: { screen: ShoppingList},
         Home: { screen: Home },
 
+    },
+);
+    const ShoppingListStack = createBottomTabNavigator({
+        ShoppingList: { screen: ShoppingList},
+        Home: { screen: HomeStack },
+        SignUp: { screen: SignUpStack },
     },
 
 );
 const App = createBottomTabNavigator({
         Home: { screen: HomeStack },
         SignUp: { screen: SignUpStack },
+        ShoppingList: { screen: ShoppingList},
     },
+    
 
 
 );
