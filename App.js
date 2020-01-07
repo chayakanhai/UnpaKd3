@@ -11,6 +11,7 @@ import Home from "./components/Screens/Home";
 import SignUp from "./components/Screens/SignUp";
 import ShoppingList from "./components/Screens/ShoppingList";
 import Map from "./components/Screens/Map";
+import { render } from "react-dom";
 
   
 
@@ -21,7 +22,7 @@ const HomeStack = createStackNavigator({
         StoreSignUp: { screen: SignUp },
         Map: { screen: Map }, 
         ShoppingList: { screen: ShoppingList }
-    },
+}, 
 
 );
 const SignUpStack = createStackNavigator({
@@ -57,6 +58,8 @@ const App = createBottomTabNavigator({
         Map: { screen: MapStack },
     },
 );
+
+
 
 
 

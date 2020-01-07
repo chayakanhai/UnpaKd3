@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Button, TextInput, StyleSheet } from "react-native";
+import {KeyboardAvoidingView} from 'react-native';
 
 class SignUp extends React.Component {
   state = {
@@ -12,7 +13,7 @@ class SignUp extends React.Component {
     this.setState({ [key]: val });
   };
   signUp = async () => {
-    const { username, password, email, phone_number } = this.state;
+    const { userame, password, email, phone_number } = this.state;
     try {
       // here place your signup logic
       console.log("user successfully signed up!: ", success);
@@ -23,6 +24,7 @@ class SignUp extends React.Component {
 
   render() {
     return (
+      
       <View style={styles.container}>
         <TextInput
           style={styles.input}
@@ -53,8 +55,9 @@ class SignUp extends React.Component {
           placeholderTextColor="white"
           onChangeText={val => this.onChangeText("phone_number", val)}
         />
-        <Button title="Sign Up" onPress={this.signUp} />
+        <Button title="Sign Up" color='green' onPress={this.signUp} />
       </View>
+      
     );
   }
 }

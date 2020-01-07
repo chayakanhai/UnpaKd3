@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, StyleSheet, Text, Button, Image } from "react-native";
+import { View, StyleSheet, Text, Button, Image, TouchableOpacity } from "react-native";
 import SignUp from "../Screens/SignUp";
 import SafeAreaView from 'react-native-safe-area-view';
 class Home extends Component {
@@ -11,11 +11,26 @@ class Home extends Component {
                 <Image style = { styles.logo }
                     source = {require("../../assets/icon.png") } >
                 </Image>
+                {/*<Button style={{color: 'green'}}
+                title='GO FIND STORES!'
+        onPress={()=> this.props.navigation.navigate('Map')} /> */}
+             <TouchableOpacity
+                style={styles.button}
+                onPress={()=> this.props.navigation.navigate('Map')}
+       >
+                <Text style={{color: 'white'}}> 'GO FIND STORES!' </Text>
+            </TouchableOpacity>
             <View style={styles.infoContainer}>
             <Text style={styles.title}>Plasticfree food shopping for a better world!</Text>
-                <Button style= {styles.button}
+                {/*<Button backgroundColor='green'
                 title='Sign UP as a store'
-                 onPress={()=> this.props.navigation.navigate('SignUp')} /> 
+    onPress={()=> this.props.navigation.navigate('SignUp')} />*/}
+                 <TouchableOpacity
+                style={styles.button2}
+                onPress={()=> this.props.navigation.navigate('SignUp')}
+    >
+                <Text style={{color: 'white'}}> 'SIGN IN AS A STORE' </Text>
+            </TouchableOpacity> 
            
             </View>
             </View > 
@@ -38,6 +53,16 @@ const styles = StyleSheet.create({
         height: "100%",
         padding: 50,
     },
+    button: {
+        alignItems: 'center',
+        backgroundColor: 'orange',
+        padding: 10
+      },
+      button2: {
+        alignItems: 'center',
+        backgroundColor: 'green',
+        padding: 10
+      },
    
     logo: {
         width: '100%',
@@ -48,7 +73,7 @@ const styles = StyleSheet.create({
     
     title: {
         color: 'white',
-        fontSize: 18,
+        fontSize: 20,
         textAlign: 'center',
         marginTop: 400
     },
@@ -56,14 +81,12 @@ const styles = StyleSheet.create({
         position: 'absolute',
         left: 0,
         right: 0,
-        bottom: 0, 
+        bottom: 20, 
         height: 50,
         padding: 20,
         
     },
-    button: { 
-      color: 'red'
-    }
+    
 })
 
 
