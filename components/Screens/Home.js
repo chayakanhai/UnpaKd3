@@ -1,18 +1,17 @@
 import React, { Component } from "react";
 import { View, StyleSheet, Text, Button, Image } from "react-native";
 import SignUp from "../Screens/SignUp";
-
+import SafeAreaView from 'react-native-safe-area-view';
 class Home extends Component {
     render() {
         return ( 
-        <View style = { styles.container } > 
-        
-        
+            <SafeAreaView style={{ flex: 1, backgroundColor: 'blue' }}>
+            <View style = { styles.container } > 
             <View style = { styles.logoContainer } >
                 <Image style = { styles.logo }
                     source = {require("../../assets/icon.png") } >
                 </Image>
-                <View style={styles.infoContainer}>
+            <View style={styles.infoContainer}>
             <Text style={styles.title}>Plasticfree food shopping for a better world!</Text>
                 <Button style= {styles.button}
                 title='Sign UP as a store'
@@ -20,9 +19,9 @@ class Home extends Component {
            
             </View>
             </View > 
-            
             </View>
-            
+           </SafeAreaView>
+       
         );
     }
 }
