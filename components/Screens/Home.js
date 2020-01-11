@@ -1,15 +1,16 @@
 import React, { Component } from "react";
-import { View, StyleSheet, Text, Button, Image, TouchableOpacity } from "react-native";
+import { View, StyleSheet, Text, Button, Image, TouchableOpacity, StatusBar } from "react-native";
 import SignUp from "../Screens/SignUp";
 import SafeAreaView from 'react-native-safe-area-view';
 class Home extends Component {
     render() {
         return ( 
-            <SafeAreaView style={{ flex: 1, backgroundColor: 'blue' }}>
+            <SafeAreaView style={{ flex: 1, paddingBottom:2 }}>
+                <StatusBar barStyle="light-content" backgroundColor="#6a51ae" />
             <View style = { styles.container } > 
             <View style = { styles.logoContainer } >
                 <Image style = { styles.logo }
-                    source = {require("../../assets/icon.png") } >
+                    source = {require("../../assets/logounpakd.png") } >
                 </Image>
                 {/*<Button style={{color: 'green'}}
                 title='GO FIND STORES!'
@@ -18,7 +19,7 @@ class Home extends Component {
                 style={styles.button}
                 onPress={()=> this.props.navigation.navigate('Map')}
        >
-                <Text style={{color: 'white'}}> 'GO FIND STORES!' </Text>
+                <Text style={{color: 'white'}}> GO FIND STORES! </Text>
             </TouchableOpacity>
             <View style={styles.infoContainer}>
             <Text style={styles.title}>Plasticfree food shopping for a better world!</Text>
@@ -29,7 +30,7 @@ class Home extends Component {
                 style={styles.button2}
                 onPress={()=> this.props.navigation.navigate('SignUp')}
     >
-                <Text style={{color: 'white'}}> 'SIGN IN AS A STORE' </Text>
+                <Text style={{color: 'white'}}> SIGN UP AS A STORE </Text>
             </TouchableOpacity> 
            
             </View>
