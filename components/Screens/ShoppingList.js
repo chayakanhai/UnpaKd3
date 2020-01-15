@@ -30,7 +30,7 @@ function ShoppingList() {
     <View style={styles.screen}>
       <Image style={styles.image} 
       source={require("../../assets/vegs.jpg")}></Image>
-      <Button title="Add New Ingredient"  color='green'   onPress={() => setIsAddMode(true)} />
+      <Button title="Add New Ingredient"  color='#74d14c'   onPress={() => setIsAddMode(true)} />
       <IngredientInput
         visible={isAddMode}
         onAddIngredient={addIngredientHandler}

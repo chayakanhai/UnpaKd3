@@ -55,7 +55,7 @@ class SignUp extends React.Component {
           placeholderTextColor="white"
           onChangeText={val => this.onChangeText("phone_number", val)}
         />
-        <Button title="Sign Up" color='green' onPress={this.signUp} />
+        <Button title="Sign Up" color='#0099FF' onPress={this.signUp} />
       </View>
       
     );
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
   input: {
     width: 350,
     height: 55,
-    backgroundColor: "orange",
+    backgroundColor: "#74d14c",
     margin: 10,
     padding: 8,
     color: "white",

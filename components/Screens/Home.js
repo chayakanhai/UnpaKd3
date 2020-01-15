@@ -10,29 +10,20 @@ class Home extends Component {
             <View style = { styles.container } > 
             <View style = { styles.logoContainer } >
                 <Image style = { styles.logo }
-                    source = {require("../../assets/logounpakd.png") } >
+                    source = {require("../../assets/logo1.png") } >
                 </Image>
-                {/*<Button style={{color: 'green'}}
-                title='GO FIND STORES!'
-        onPress={()=> this.props.navigation.navigate('Map')} /> */}
              <TouchableOpacity
                 style={styles.button}
-                onPress={()=> this.props.navigation.navigate('Map')}
-       >
+                onPress={()=> this.props.navigation.navigate('Map')}>
                 <Text style={{color: 'white'}}> GO FIND STORES! </Text>
             </TouchableOpacity>
             <View style={styles.infoContainer}>
             <Text style={styles.title}>Plasticfree food shopping for a better world!</Text>
-                {/*<Button backgroundColor='green'
-                title='Sign UP as a store'
-    onPress={()=> this.props.navigation.navigate('SignUp')} />*/}
                  <TouchableOpacity
                 style={styles.button2}
-                onPress={()=> this.props.navigation.navigate('SignUp')}
-    >
+                onPress={()=> this.props.navigation.navigate('SignUp')}>
                 <Text style={{color: 'white'}}> SIGN UP AS A STORE </Text>
             </TouchableOpacity> 
-           
             </View>
             </View > 
             </View>
@@ -54,14 +45,21 @@ const styles = StyleSheet.create({
         height: "100%",
         padding: 50,
     },
+    earth:{
+        width: '50%',
+        marginTop: 20,
+        height: 50,
+        alignSelf: 'auto'
+        
+    },
     button: {
         alignItems: 'center',
-        backgroundColor: 'orange',
+        backgroundColor: '#74d14c',
         padding: 10
       },
       button2: {
         alignItems: 'center',
-        backgroundColor: 'green',
+        backgroundColor: '#0099FF',
         padding: 10
       },
    
